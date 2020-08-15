@@ -49,11 +49,11 @@ void GameState::Enter()
 	SOMA::SetMusicVolume(15);
 	SOMA::PlayMusic("adventure", -1, 3000);
 
-	SDL_Color textColor = { 200, 0, 0, 0 };
+	SDL_Color textColor = { 250, 250, 250, 250 };
 
-	m_pInstruct[0] = new Label("standard", 35, 40, "Press R to restart the play scene", textColor);
-	m_pInstruct[1] = new Label("standard", 35, 55, "Press H to toggle the Debug view", textColor);
-	m_pInstruct[2] = new Label("standard", 35, 70, "Press P to toggle idel/patrol mode of enemies ", textColor);
+	m_pInstruct[0] = new Label("standard", 380, 40, "Press R to restart the play scene", textColor);
+	m_pInstruct[1] = new Label("standard", 380, 55, "Press H to toggle the Debug view", textColor);
+	m_pInstruct[2] = new Label("standard", 380, 70, "Press P to toggle idle/patrol mode of enemies ", textColor);
 
 	// Add player 
 	m_pPlayer = new Player({ 0,0,32,32 }, { (float)(16) * 32, (float)(12) * 32, 32, 32 }, Engine::Instance().GetRenderer(), m_pPlayerText, 0, 0, 0, 4);
